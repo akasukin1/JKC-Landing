@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JKC Company</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+<link
+rel="stylesheet"
+as="style"
+crossorigin
+href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+
+<!-- AOS CSS -->
+<link rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Pretendard',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:
+radial-gradient(circle at top,#0d3b66 0%,#050505 35%,#000000 100%);
+
+color:white;
+overflow-x:hidden;
+
+font-family:'Pretendard',sans-serif;
+
+    font-size:16px;
+
+    font-weight:400;
+
+    line-height:1.6;
+
+    letter-spacing:-0.02em;
+    
+     -webkit-font-smoothing:antialiased;
+
+    text-rendering:optimizeLegibility;
+
+}
+
+body::before{
+
+content:'';
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle,#00B8FF15 1px,transparent 1px);
+background-size:28px 28px;
+opacity:.2;
+z-index:-1;
+
+}
+
+section{
+
+width:100%;
+padding:90px 10%;
+
+}
+
+/****************************/
+
+
+
+@keyframes glow{
+
+0%{
+
+transform:translate(-10%,-5%) scale(1);
+
+}
+
+50%{
+
+transform:translate(10%,10%) scale(1.2);
+
+}
+
+100%{
+
+transform:translate(-10%,-5%) scale(1);
+
+}
+
+}
+
+
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    isolation:isolate;
+
+}
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    rgba(0,0,.10,.10),
+
+    rgba(0,0,0,.95)
+
+    );
+
+    z-index:-1;
+
+}
+
+
+
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:80%;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(0,180,255,.16),
+
+    transparent 90%);
+
+    filter:blur(80px);
+
+    animation:glow 8s ease-in-out infinite;
+
+    z-index:-1;
+
+}
+
+
+
+.logo{
+
+    width:160px;
+    max-width:45vw;
+    height:auto;
+
+
+    margin-bottom:30px;
+
+    transition:.35s ease;
+
+    filter:
+        drop-shadow(0 0 8px rgba(0,184,255,.25))
+        drop-shadow(0 0 18px rgba(0,184,255,.12));
+
+}
+
+.logo:hover{
+
+    transform:scale(1.04);
+
+    filter:
+        drop-shadow(0 0 15px rgba(0,184,255,.45))
+        drop-shadow(0 0 35px rgba(0,184,255,.25));
+
+}
+
+.hero h1{
+
+font-size:65px;
+font-weight:800;
+
+line-height:1.2;
+
+background:linear-gradient(90deg,#ffffff,#00B8FF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.hero p{
+
+margin-top:25px;
+
+font-size:22px;
+color:#cfcfcf;
+
+line-height:1.6;
+
+max-width:850px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:45px;
+
+padding:18px 45px;
+
+background:linear-gradient(90deg,#00B8FF,#0066ff);
+
+border-radius:50px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:700;
+
+transition:.3s;
+
+box-shadow:
+
+0 0 25px #00B8FF55;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 0 35px #00B8FF;
+
+}
+
+/****************************/
+
+.title{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.title h2{
+
+font-size:44px;
+
+margin-bottom:15px;
+
+}
+
+.title p{
+
+color:#bcbcbc;
+
+}
+
+/****************************/
+
+.products{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(14px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:25px;
+
+overflow:hidden;
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease,
+
+        border-color .35s ease,
+
+        background .35s ease;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+scale(1.02);
+
+border-color:#00B8FF;
+
+box-shadow:
+
+0 0 35px #00B8FF33;
+
+}
+
+.card img{
+
+width:100%;
+height:100%;
+
+object-fit:contain;
+
+background:#111;
+
+padding:20px;
+
+}
+
+
+/** slide 캐러셀 추가 **/
+.product-slider{
+
+    position:relative;
+
+    height:300px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+}
+
+.product-slider img{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+.product-slider img.active{
+
+    opacity:1;
+
+}
+
+.dots{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:32px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:10px;
+
+    z-index:20;
+
+}
+
+.dots span{
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#666;
+
+}
+
+.dots span.active{
+
+    background:#00B8FF;
+
+    box-shadow:0 0 10px #00B8FF;
+
+}
+
+
+
+
+
+.info{
+
+padding:30px;
+
+}
+
+.info h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+font-weight:700;
+
+}
+
+.info p{
+
+line-height:1.8;
+
+color:#cfcfcf;
+
+font-size:16px;
+
+margin-bottom:25px;
+
+}
+
+.spec{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+margin-bottom:25px;
+
+}
+
+.spec span{
+
+background:#0f2940;
+
+padding:8px 14px;
+
+border-radius:30px;
+
+font-size:14px;
+
+color:#00B8FF;
+
+}
+
+/****************************/
+
+.cta{
+
+text-align:center;
+
+padding:120px 10%;
+
+}
+
+.cta h2{
+
+font-size:48px;
+
+margin-bottom:25px;
+
+}
+
+.cta p{
+
+color:#ccc;
+
+font-size:20px;
+
+margin-bottom:40px;
+
+}
+
+/****************************/
+
+footer{
+
+padding:50px;
+
+text-align:center;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+color:#999;
+
+background:#020202;
+
+}
+
+/****************************/
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:42px;
+text-shadow:
+
+0 0 10px rgba(255,255,255,.15),
+
+0 0 20px rgba(0,184,255,.35),
+
+0 0 45px rgba(0,184,255,.25);
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.title h2{
+
+font-size:32px;
+
+}
+
+ .logo{
+
+        width:130px;
+        margin-bottom:20px;
+
+    }
+
+
+}
+
+
+
+.bg-line{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+opacity:.20;
+
+z-index:-2;
+
+}
+
+.bg-line path{
+
+fill:none;
+
+stroke:#00B8FF;
+
+stroke-width:2;
+
+stroke-dasharray:10;
+
+stroke-linecap:round;
+
+animation:dataFlow 50s linear infinite;
+
+filter:
+
+drop-shadow(0 0 12px #00B8FF);
+
+}
+
+
+@keyframes dataFlow{
+
+from{
+
+stroke-dashoffset:0;
+
+}
+
+to{
+
+stroke-dashoffset:-400;
+
+}
+
+}
+
+</style>
+
+
+<!-- THREE -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+<!-- VANTA -->
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+
+</head>
+
+<body>
+
+<section class="hero" id="hero">
+
+<img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/logo.png"
+     class="logo">
+
+<h1>
+Future AI Computing Platform
+</h1>
+
+<p>
+
+JK Company는 AI · GPU · Edge Computing · High Performance Computing(HPC) 분야의
+최신 솔루션을 공급하는 전문 기업입니다.
+
+</p>
+
+<a href="#products" class="btn">
+PRODUCTS
+</a>
+
+</section>
+
+<section id="products">
+
+<div class="title"
+     data-aos="fade-up">
+
+<h2>PRODUCT LINEUP</h2>
+
+<p>
+JK Company의 대표 제품 라인업
+</p>
+
+<p
+data-aos="fade-up"
+data-aos-delay="250">
+
+</div>
+
+<div class="products">
+
+<div class="card"
+     data-aos="fade-up"
+     data-aos-delay="0">
+
+        <div class="product-slider">
+
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/01.jpg" class="active">
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/01-2.jpg">
+
+            <div class="dots">
+
+                <span class="active"></span>
+                <span></span>
+
+            </div>
+
+        </div>
+
+<!-- <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/01.png"> -->
+
+<div class="info">
+
+<h3>NVIDIA-A100-pcie</h3>
+
+<p>
+
+고성능 AI 추론 및 딥러닝을 위한
+PCIe GPU Accelerator
+
+</p>
+
+<div class="spec">
+
+<span>CUDA</span>
+
+<span>AI</span>
+
+<span>Tensor</span>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+<div class="card"
+     data-aos="fade-up"
+     data-aos-delay="100">
+
+     <div class="product-slider">
+
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/02.jpg" class="active">
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/02-2.jpg">
+
+            <div class="dots">
+
+                <span class="active"></span>
+                <span></span>
+
+            </div>
+
+    </div>
+
+<div class="info">
+
+<h3>DGS Spark Foundation</h3>
+
+<p>
+
+AI 개발자를 위한
+Desktop AI Supercomputer
+
+</p>
+
+<div class="spec">
+
+<span>Grace</span>
+
+<span>Blackwell</span>
+
+<span>LLM</span>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+<div class="card"
+     data-aos="fade-up"
+     data-aos-delay="200">
+
+     <div class="product-slider">
+
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/03.jpg" class="active">
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/03-2.jpg">
+
+            <div class="dots">
+
+                <span class="active"></span>
+                <span></span>
+
+            </div>
+
+    </div>
+
+
+<div class="info">
+
+<h3>DGX Spark GB10</h3>
+
+<p>
+
+제품 패키지와 함께 제공되는
+Complete AI Development Platform
+
+</p>
+
+<div class="spec">
+
+<span>AI</span>
+
+<span>Developer</span>
+
+<span>GPU</span>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+<div class="card"
+     data-aos="fade-up"
+     data-aos-delay="300">
+
+     <div>
+
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/04.jpg">
+
+
+
+    </div>
+
+<div class="info">
+
+<h3>Nvidia RTX PRO 4000 Blackwell</h3>
+
+<p>
+
+데이터센터를 위한
+Professional GPU Solution
+
+</p>
+
+<div class="spec">
+
+<span>Server</span>
+
+<span>PCIe</span>
+
+<span>HPC</span>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+<div class="card"
+     data-aos="fade-up"
+     data-aos-delay="400">
+
+     <div class="product-slider">
+
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/05.jpg" class="active">
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/05-2.jpg">
+
+            <div class="dots">
+
+                <span class="active"></span>
+                <span></span>
+
+            </div>
+
+    </div>
+
+<div class="info">
+
+<h3>Nvidia RTX PRO 5000 Blackwell</h3>
+
+<p>
+
+Notebook + DGX Spark 기반
+Portable AI Development 환경
+
+</p>
+
+<div class="spec">
+
+<span>Linux</span>
+
+<span>AI Studio</span>
+
+<span>LLM</span>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta"
+data-aos="fade-up" >
+
+<h2>
+
+Let's Build the Future of AI
+
+</h2>
+
+<p>
+
+최고의 AI 인프라와 GPU 솔루션을 JK Company와 함께 시작하세요.
+
+</p>
+
+
+<p
+data-aos="fade-up"
+data-aos-delay="250">
+
+</div>
+
+
+</section>
+
+<footer>
+
+© 2026 JK COMPANY<br>
+
+AI · GPU · HPC · Edge Computing Solution
+
+</footer>
+
+<svg class="bg-line">
+
+<path
+d="M0 220
+Q200 100
+500 320
+T800 220
+T1200 180
+T1800 260"/>
+
+</svg>
+
+<!-- <script>
+
+    VANTA.NET({
+
+    el:"#hero",
+
+    mouseControls:true,
+
+    touchControls:true,
+
+    gyroControls:false,
+
+    minHeight:300,
+
+    minWidth:300,
+
+    scale:1,
+
+    scaleMobile:1,
+
+    color:0x00b8ff,
+
+    backgroundColor:0x000000,
+
+    points:16,
+
+    maxDistance:12,
+
+    spacing:18,
+
+    showDots:true
+
+    });
+
+</script> -->
+
+
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+
+    duration:900,
+    easing:'ease-out-cubic',
+    once:true,
+    offset:120,
+    delay:0
+
+});
+
+
+<!-- 스크립트 indicator 캐러셀 추가-->
+document.querySelectorAll('.product-slider').forEach(slider=>{
+
+    const imgs=slider.querySelectorAll('img');
+    const dots=slider.querySelectorAll('.dots span');
+
+    let index=0;
+
+    setInterval(()=>{
+
+        imgs[index].classList.remove('active');
+        dots[index].classList.remove('active');
+
+        index=(index+1)%imgs.length;
+
+        imgs[index].classList.add('active');
+        dots[index].classList.add('active');
+
+    },4300);
+
+});
+</script>
+
+
+
+</body>
+</html>
