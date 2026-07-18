@@ -357,7 +357,7 @@ box-shadow:
 .card img{
 
 width:100%;
-height:250px;
+height:100%;
 
 object-fit:contain;
 
@@ -366,6 +366,88 @@ background:#111;
 padding:20px;
 
 }
+
+
+/** slide 캐러셀 추가 **/
+.product-slider{
+
+    position:relative;
+
+    height:300px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+}
+
+.product-slider img{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+.product-slider img.active{
+
+    opacity:1;
+
+}
+
+.dots{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:32px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:10px;
+
+    z-index:20;
+
+}
+
+.dots span{
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#666;
+
+}
+
+.dots span.active{
+
+    background:#00B8FF;
+
+    box-shadow:0 0 10px #00B8FF;
+
+}
+
+
+
+
 
 .info{
 
@@ -579,7 +661,7 @@ stroke-dashoffset:-400;
 
 <section class="hero" id="hero">
 
-<img src="https://github.com/akasukin1/JKC-Landing.git"
+<img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/logo.png"
      class="logo">
 
 <h1>
@@ -588,7 +670,7 @@ Future AI Computing Platform
 
 <p>
 
-JKC Company는 AI · GPU · Edge Computing · High Performance Computing(HPC) 분야의
+JK Company는 AI · GPU · Edge Computing · High Performance Computing(HPC) 분야의
 최신 솔루션을 공급하는 전문 기업입니다.
 
 </p>
@@ -607,7 +689,7 @@ PRODUCTS
 <h2>PRODUCT LINEUP</h2>
 
 <p>
-JKC Company의 대표 제품 라인업
+JK Company의 대표 제품 라인업
 </p>
 
 <p
@@ -622,7 +704,21 @@ data-aos-delay="250">
      data-aos="fade-up"
      data-aos-delay="0">
 
-<img src="01.png">
+        <div class="product-slider">
+
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/01.jpg" class="active">
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/01-2.jpg">
+
+            <div class="dots">
+
+                <span class="active"></span>
+                <span></span>
+
+            </div>
+
+        </div>
+
+<!-- <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/01.png"> -->
 
 <div class="info">
 
@@ -655,7 +751,19 @@ PCIe GPU Accelerator
      data-aos="fade-up"
      data-aos-delay="100">
 
-<img src="02.jpeg">
+     <div class="product-slider">
+
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/02.jpg" class="active">
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/02-2.jpg">
+
+            <div class="dots">
+
+                <span class="active"></span>
+                <span></span>
+
+            </div>
+
+    </div>
 
 <div class="info">
 
@@ -688,7 +796,20 @@ Desktop AI Supercomputer
      data-aos="fade-up"
      data-aos-delay="200">
 
-<img src="03.jpeg">
+     <div class="product-slider">
+
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/03.jpg" class="active">
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/03-2.jpg">
+
+            <div class="dots">
+
+                <span class="active"></span>
+                <span></span>
+
+            </div>
+
+    </div>
+
 
 <div class="info">
 
@@ -721,7 +842,13 @@ Complete AI Development Platform
      data-aos="fade-up"
      data-aos-delay="300">
 
-<img src="04.png">
+     <div>
+
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/04.jpg">
+
+
+
+    </div>
 
 <div class="info">
 
@@ -754,7 +881,19 @@ Professional GPU Solution
      data-aos="fade-up"
      data-aos-delay="400">
 
-<img src="05.jpeg">
+     <div class="product-slider">
+
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/05.jpg" class="active">
+            <img src="https://cdn.jsdelivr.net/gh/akasukin1/JKC-Landing@main/assets/05-2.jpg">
+
+            <div class="dots">
+
+                <span class="active"></span>
+                <span></span>
+
+            </div>
+
+    </div>
 
 <div class="info">
 
@@ -787,7 +926,8 @@ Portable AI Development 환경
 
 </section>
 
-<section class="cta">
+<section class="cta"
+data-aos="fade-up" >
 
 <h2>
 
@@ -797,17 +937,23 @@ Let's Build the Future of AI
 
 <p>
 
-최고의 AI 인프라와 GPU 솔루션을 JKC Company와 함께 시작하세요.
+최고의 AI 인프라와 GPU 솔루션을 JK Company와 함께 시작하세요.
 
 </p>
 
+
+<p
+data-aos="fade-up"
+data-aos-delay="250">
+
+</div>
 
 
 </section>
 
 <footer>
 
-© 2026 JKC COMPANY<br>
+© 2026 JK COMPANY<br>
 
 AI · GPU · HPC · Edge Computing Solution
 
@@ -874,6 +1020,29 @@ AOS.init({
     once:true,
     offset:120,
     delay:0
+
+});
+
+
+<!-- 스크립트 indicator 캐러셀 추가-->
+document.querySelectorAll('.product-slider').forEach(slider=>{
+
+    const imgs=slider.querySelectorAll('img');
+    const dots=slider.querySelectorAll('.dots span');
+
+    let index=0;
+
+    setInterval(()=>{
+
+        imgs[index].classList.remove('active');
+        dots[index].classList.remove('active');
+
+        index=(index+1)%imgs.length;
+
+        imgs[index].classList.add('active');
+        dots[index].classList.add('active');
+
+    },4300);
 
 });
 </script>
